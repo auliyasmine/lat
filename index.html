@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rental Kendaraan Aulia</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ffe4ec, #ffc0cb);
+      color: #333;
+    }
+
+    header, footer {
+      background: #ff69b4;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      background: #ffb6c1;
+      padding: 0.8rem 0;
+      margin: 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffe4ec;
+    }
+
+    section {
+      padding: 2rem;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    figure {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    figure img {
+      width: 80%;
+      max-width: 500px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    figure figcaption {
+      margin-top: 0.5rem;
+      font-style: italic;
+      color: #555;
+    }
+
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+
+    fieldset {
+      border: none;
+      padding: 0;
+    }
+
+    input, select, textarea, button {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #ff69b4;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #ff1493;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>Rental Kendaraan Aulia</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#beranda">Beranda</a></li>
+      <li><a href="#form">Pemesanan</a></li>
+    </ul>
+  </nav>
+
+  <section id="beranda">
+    <article>
+      <h2>Selamat Datang di Rental Kendaraan Aulia</h2>
+      <p>Kami menyediakan berbagai macam kendaraan dengan harga terjangkau dan layanan terbaik!</p>
+
+      <figure>
+        <img src="https://source.unsplash.com/600x400/?car" alt="Gambar Mobil">
+        <figcaption>Mobil Keluarga Nyaman</figcaption>
+      </figure>
+    </article>
+  </section>
+
+  <section id="form">
+    <h2>Formulir Pemesanan</h2>
+    <form>
+      <fieldset>
+        <legend>Data Pemesan</legend>
+        <label>Nama Pemesan:
+          <input type="text" name="nama" required>
+        </label>
+        <label>Alamat Pengiriman:
+          <input type="text" name="alamat" required>
+        </label>
+        <label>Nomor Telepon:
+          <input type="tel" name="telepon" pattern="[0-9]{10,13}" required title="Masukkan nomor 10-13 digit angka.">
+        </label>
+        <label>Tanggal Sewa:
+          <input type="date" name="tanggal_sewa" required>
+        </label>
+        <label>Tanggal Pengembalian:
+          <input type="date" name="tanggal_kembali" required>
+        </label>
+        <label>Jenis Kendaraan:
+          <select name="jenis_kendaraan" required>
+            <option value="">Pilih</option>
+            <option value="mobil">Mobil</option>
+            <option value="motor">Motor</option>
+          </select>
+        </label>
+        <label>Model Kendaraan:
+          <input type="text" name="model" required>
+        </label>
+        <label>Nomor Plat Kendaraan:
+          <input type="text" name="plat">
+        </label>
+        <label>Asuransi Tambahan:
+          <input type="radio" name="asuransi" value="ya" required> Ya
+          <input type="radio" name="asuransi" value="tidak" required> Tidak
+        </label>
+        <label>Catatan Khusus:
+          <textarea name="catatan" rows="4"></textarea>
+        </label>
+        <button type="submit">Pesan Sekarang</button>
+      </fieldset>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Rental Kendaraan Aulia. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
